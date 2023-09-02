@@ -5,7 +5,6 @@ function ECNcrypt(key,message)
     if (keyLength > messageLength)
     {
         var diff = keyLength - messageLength
-        console.log(keyLength, messageLength)
         var bufferKey = Buffer.from(key)
         var sliceKey = bufferKey.subarray(0, keyLength - diff)
         var keyNew = sliceKey.toString()
